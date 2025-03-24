@@ -3,15 +3,11 @@ import time
 import getopt, sys
 from initialize import ensure_nltk_data, initialize_models
 
-from image_data_processing import (
-    process_image_files
-)
+# from image_data_processing import (
+#     process_image_files
+# )
 
-from file_utils import (collect_file_paths,
-                        display_directory_tree,
-                        simulate_directory_tree,
-                          display_simulated_tree,
-                            separate_files_by_type) 
+from SortPhoto import file_utils
 
 DATA_PATH = "/mnt/d/Pictures"
 OUTPUT_PATH = "/mnt/d/Organize_Pictures"

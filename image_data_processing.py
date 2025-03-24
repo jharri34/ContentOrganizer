@@ -23,12 +23,8 @@ def process_single_image(image_path, image_inference, text_inference):
     time_taken = end_time - start_time
 
     message = f"File: {image_path}\nTime taken: {time_taken:.2f} seconds\nDescription: {description}\nFolder name: {foldername}\nGenerated filename: {filename}\n"
-    if silent:
-        if log_file:
-            with open(log_file, 'a') as f:
-                f.write(message + '\n')
-    else:
-        print(message)
+    
+    print(message)
     return {
         'file_path': image_path,
         'foldername': foldername,
