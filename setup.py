@@ -7,8 +7,8 @@ setup(
     name="ContentOrganizer",
     version="0.1",
     packages=find_packages(),
-    description="SortPhoto is a lightweight, dependency-free image sorting tool that organizes your photos by date or file type",
-    url="https://github.com/jharri34/SortPhotos",
+    description="ContentOrganizer is a local-first, AI-powered tool that intelligently analyzes and organizes your image files into meaningful folders based on visual content—securely, privately, and with zero cloud dependencies.",
+    url="https://github.com/jharri34/ContentOrganizer",
     author="jharri34",
     long_description=long_description,
 )

@@ -2,12 +2,17 @@ import os
 import time
 import getopt, sys
 from initialize import ensure_nltk_data, initialize_models
+# sys.path.insert(0,"/mnt/d/workspace/SortPhotos")
 
-# from image_data_processing import (
-#     process_image_files
-# )
-
-from SortPhoto import file_utils
+# from SortPhoto import (collect_file_paths,
+#                         display_directory_tree,
+#                         simulate_directory_tree,
+#                         display_simulated_tree,
+#                         separate_files_by_type)
+# import SortPhoto
+# from SortPhoto import *
+# from ..SortPhoto import *
+from SortPhoto import *
 
 DATA_PATH = "/mnt/d/Pictures"
 OUTPUT_PATH = "/mnt/d/Organize_Pictures"
@@ -40,20 +45,20 @@ def main():
     print("-" * 50)
 
     # Start processing files
-    start_time = time.time()
-    file_paths = collect_file_paths(DATA_PATH)
-    end_time = time.time()
-    print(f"Time taken to load file paths: {end_time - start_time:.2f} seconds")
-    print("-" * 50)
+    # start_time = time.time()
+    # file_paths = collect_file_paths(DATA_PATH)
+    # end_time = time.time()
+    # print(f"Time taken to load file paths: {end_time - start_time:.2f} seconds")
+    # print("-" * 50)
 
-    print("Directory tree before organizing:")
-    #display_directory_tree(DATA_PATH)
+    # print("Directory tree before organizing:")
+    # #display_directory_tree(DATA_PATH)
 
-    # Prepare to collect link type statistics
-    link_type_counts = {'hardlink': 0, 'symlink': 0}
+    # # Prepare to collect link type statistics
+    # link_type_counts = {'hardlink': 0, 'symlink': 0}
     
-    # Separate files by type
-    image_files = separate_files_by_type(file_paths)
+    # # Separate files by type
+    # image_files = separate_files_by_type(file_paths)
     
    
     

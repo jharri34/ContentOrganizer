@@ -1,4 +1,4 @@
-from output_filter import filter_specific_output  # Import the context manager
+from src.contentorganizer.output_filter import filter_specific_output  # Import the context manager
 from nexa.gguf import NexaVLMInference, NexaTextInference  # Import model classes
 
 # Initialize models

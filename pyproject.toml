@@ -1,0 +1,24 @@
+[project]
+name = "contentorganizer"
+version = "0.0.1"
+authors = [
+  { name="jharri34", email="harrisjayjamall@gmail.com" },
+]
+description = "About
+ContentOrganizer is a local-first, AI-powered tool that intelligently analyzes and organizes your image files into meaningful folders based on visual content—securely, privately, and with zero cloud dependencies."
+readme = "README.md"
+requires-python = ">=3.13.2"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE*"]
+
+[project.urls]
+Homepage = "https://github.com/jharri34/ContentOrganizer"
+Issues = "https://github.com/jharri34/ContentOrganizer/issues"
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
