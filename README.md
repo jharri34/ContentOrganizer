@@ -71,8 +71,7 @@ Steps to Install
 git clone https://github.com/jharri34/ContentOrganizer
 source venv/bin/activate
 ```
-
-> desktop application coming soon
+desktop application coming soon
 
 
 2. Install the Nexa SDK
@@ -92,7 +91,7 @@ Run the following commands to install required libraries:
 4. Running the Script
 Activate your Python environment.
 
-Run the script:
+Run the script: 
 ```bash
 python src/contentorganizer/main.py    
 ```
