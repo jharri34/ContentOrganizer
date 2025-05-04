@@ -1,4 +1,4 @@
-from src.contentorganizer.output_filter import filter_specific_output  # Import the context manager
+from output_filter import filter_specific_output  # Import the context manager
 from nexa.gguf import NexaVLMInference, NexaTextInference  # Import model classes
 
 # Initialize models
@@ -48,6 +48,7 @@ def initialize_models():
                 # add n_ctx if out of context window usage: n_ctx=2048
 
             )
+    return image_inference, text_inference
 
         
     print("**----------------------------------------------**")
