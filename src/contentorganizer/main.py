@@ -4,7 +4,7 @@ import getopt, sys
 from initialize import ensure_nltk_data, initialize_models
 from sortphoto import file_utils
 from image_data_processing import process_image_files
-from data_processing import compute_operations
+from data_processing import compute_operations, execute_operations
 
 
 DATA_PATH = "/mnt/d/Pictures"
@@ -78,10 +78,30 @@ def main():
     simulated_tree = file_utils.simulate_directory_tree(operations, output_path)
     file_utils.display_simulated_tree(simulated_tree)
     print("-" * 50)
-   
+    # Ask user if they want to proceed
+    proceed = get_yes_no("Would you like to proceed with these changes? (yes/no): ")
+    if proceed:
+        # Create the output directory now
+        os.makedirs(output_path, exist_ok=True)
+
+        # Perform the actual file operations
+        message = "Performing file operations..."
+
+        print(message)
+        execute_operations(
+        operations,
+        dry_run=False,
+       
+        )
+
+        message = "The files have been organized successfully."
+        print("-" * 50)
+        print(message)
+        print("-" * 50)
+       
 
   
     
     
 if __name__=="__main__":
-    main()
+    main() 

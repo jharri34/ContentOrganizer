@@ -71,7 +71,7 @@ def compute_operations(data_list, new_path, renamed_files, processed_files):
         renamed_files.add(new_file_path)
 
     return operations  # Return the list of operations for display or further processing
-def execute_operations(operations, dry_run=False, silent=False, log_file=None):
+def execute_operations(operations, dry_run=False, silent=False):
     """Execute the file operations."""
     total_operations = len(operations)
 
@@ -106,9 +106,5 @@ def execute_operations(operations, dry_run=False, silent=False, log_file=None):
             progress.advance(task)
 
             # Silent mode handling
-            if silent:
-                if log_file:
-                    with open(log_file, 'a') as f:
-                        f.write(message + '\n')
-            else:
-                print(message)
+            
+            print(message)
