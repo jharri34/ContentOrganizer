@@ -18,6 +18,20 @@ options = "hdt"
 # Long options
 long_options = ["Help", "date", "type"]
 
+def get_yes_no(prompt):
+    """Prompt the user for a yes/no response."""
+    while True:
+        response = input(prompt).strip().lower()
+        if response in ('yes', 'y'):
+            return True
+        elif response in ('no', 'n'):
+            return False
+        elif response == '/exit':
+            print("Exiting program.")
+            exit()
+        else:
+            print("Please enter 'yes' or 'no'. To exit, type '/exit'.")
+            
 def main():
     # Ensure NLTK data is downloaded efficiently and quietly
     ensure_nltk_data()
