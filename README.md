@@ -1,15 +1,15 @@
 # 🧠 ContentOrganizer  
 **AI-Powered, Privacy-First Image Organizer**
 
-> **Bring visual clarity to your clutter. 100% local. Zero data leaves your machine.**
+> **Brings clarity to your clutter. 100% local. 100% private. Zero data leaves your machine.**
 
 ---
 
 ## 📂 What is ContentOrganizer?
 
-**ContentOrganizer** is a smart, local-first assistant designed to help you manage and organize your image files effortlessly. Powered by cutting-edge AI models, ContentOrganizer scans your image folders, understands their content, and automatically organizes them into clean, descriptive folders — all while keeping your data secure and offline.
+**ContentOrganizer** is a smart, local-first assistant designed to help you manage and organize your image files effortlessly. Powered by  AI models, ContentOrganizer scans your image folders, understands their content, and automatically organizes them into clean, descriptive folders — all while keeping your data secure and offline.
 
-Whether you're dealing with a massive folder, unsorted photography archive, or years of content, ContentOrganizer brings intelligent structure to your visual files.
+Whether you're dealing with a massive folder, unsorted photography archive, or years of content, ContentOrganizer brings intelligent structure to your files.
 
 ---
 
@@ -53,7 +53,7 @@ Whether you're dealing with a massive folder, unsorted photography archive, or y
    Based on image content, the app suggests an organized folder structure
 
 4. **Review & Confirm**  
-   Browse the preview and approve the changes you like.
+   Browse the preview and approve the changes if you like.
 
 5. **Organize!**  
    The app sorts the files into the newly structured folders.
@@ -62,79 +62,65 @@ Whether you're dealing with a massive folder, unsorted photography archive, or y
 
 ## 🛠️ Installation
 
-> _Coming soon_: 
+Prerequisites
+- Python 3.12 or later
+
+Steps to Install
+1. **Clone the Repository**
+```bash
+git clone https://github.com/jharri34/ContentOrganizer
+source venv/bin/activate
+```
+
+> desktop application coming soon
 
 
-This intelligent file organizer harnesses the power of advanced AI models, including language models (LMs) and vision-language models (VLMs), to automate the process of organizing files by:
+2. Install the Nexa SDK
+To install the CPU version of the Nexa SDK, run:
+```bash
+pip install nexaai
+```
+> Note: If you encounter issues with any packages, install them individually:
 
-Scanning a specified input directory for files.
 
-Content Understanding:
+3. Install Additional Dependencies
+Run the following commands to install required libraries:
+```bash
+ pip install nltk
+ pip install llama-cpp-python 
+```
+4. Running the Script
+Activate your Python environment.
 
-Textual Analysis: Uses the Llama3.2 3B to analyze and summarize text-based content, generating relevant descriptions and filenames.
-Visual Content Analysis: Uses the LLaVA-v1.6 , based on Vicuna-7B, to interpret visual files such as images, providing context-aware categorization and descriptions.
-Understanding the content of your files (text, images, and more) to generate relevant descriptions, folder names, and filenames.
+Run the script:
+```bash
+python src/contentorganizer/main.py    
+```
 
-Organizing the files into a new directory structure based on the generated metadata.
+## Useful links
 
-The best part? All AI processing happens 100% on your local device using the Nexa SDK. No internet connection required, no data leaves your computer, and no AI API is needed - keeping your files completely private and secure.
+* https://nexa.ai/
+* https://www.nltk.org/
+* https://github.com/ggml-org/llama.cpp
+* https://github.com/QiuYannnn/Local-File-Organizer.git
 
-1. Install Python
-Before installing the Local File Organizer, make sure you have Python installed on your system. We recommend using Python 3.12 or later.
 
-You can download Python from the official website.
+## Dependencies:
+* onnx
+* llama-cpp-python
+* nltk
+* pytesseract: Requires Tesseract OCR installed on your system
+* AI Models: Llama 3.2 3B, Llava v1.6
+* SDK: Nexa SDK for local AI processing
+* Languages: Python
+* Libraries: Pillow, pytesseract, PyMuPDF, python-docx, nltk, llama-cpp-python
 
-Follow the installation instructions for your operating system.
+### Notes:
 
-2. Clone the Repository
-Clone this repository to your local machine using Git:
+* Processing may take time depending:
+ on the number and size of files.
 
-git clone https://github.com/QiuYannnn/Local-File-Organizer.git
-Or download the repository as a ZIP file and extract it to your desired location.
+* Multiprocessing to improve performance. COMING SOON
 
-4. Install Nexa SDK ️
-CPU Installation
-To install the CPU version of Nexa SDK, run:
-
-pip install nexaai --prefer-binary --index-url https://nexaai.github.io/nexa-sdk/whl/cpu --extra-index-url https://pypi.org/simple --no-cache-dir
-
-Note: If you encounter issues with any packages, install them individually:
-
-pip install nexa Pillow pytesseract PyMuPDF python-docx
-With the environment activated and dependencies installed, run the script using:
-
-6. Running the Script🎉
-python main.py
-Notes
-SDK Models:
-
-The script uses NexaVLMInference and NexaTextInference models usage.
-Ensure you have access to these models and they are correctly set up.
-You may need to download model files or configure paths.
-Dependencies:
-
-pytesseract: Requires Tesseract OCR installed on your system
-
-Processing Time:
-
-Processing may take time depending on the number and size of files.
-The script uses multiprocessing to improve performance.
-Customizing Prompts:
-
+* Customizing Prompts:
 You can adjust prompts in data_processing.py to change how metadata is generated.
-
-https://github.com/QiuYannnn/Local-File-Organizer/tree/main
-
-
- Using Llama3.2 3B and Llava v1.6 models with the Nexa SDK, it intuitively scans, restructures, and organizes files for quick, seamless access and easy retrieval.
-
- Nexa SDK is a comprehensive toolkit for supporting GGML and ONNX models. It supports text generation, image generation, vision-language models (VLM), Audio Language Model, auto-speech-recognition (ASR), and text-to-speech (TTS) capabilities.
-
- pip install nexaai
- pip install --user -U nltk
- pip install llamacpp
- 
-
- https://nexa.ai/
- https://www.nltk.org/
- https://github.com/ggml-org/llama.cpp
